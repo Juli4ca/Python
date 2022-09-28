@@ -10,6 +10,6 @@ if n < 0:
 if n == 0:
     print('N = 0')
 
-for i in range(1,n + 1):
+for i in range(1, n + 1):
     res *= i
     print(res, end=' ')
