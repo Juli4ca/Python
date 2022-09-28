@@ -2,7 +2,7 @@
 
 num = float(input('Enter a real number: '))
 
-l = len(str(num))
+l = len(str(num)) - 1
 num = int(num * 10 ** l)
 sum_num = 0
 
