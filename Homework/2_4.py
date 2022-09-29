@@ -13,7 +13,7 @@ number = int(input('Enter a number of elements: '))
 
 if first_position > (number * 2 + 1) or second_position > (number * 2 + 1):
     print('Error input')
-elif first_position <= 0 or second_position <= 0:
+elif first_position < 0 or second_position < 0:
     print('Error input')
 else:
     list_numbers = []
