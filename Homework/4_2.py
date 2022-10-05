@@ -35,7 +35,9 @@ def prime_factors_number(n):
 
 
 num = int(input("Задайте натуральное число N: "))
-if natural_number(num):
+if -2 < num < 2:
+    print("Недопустимое значение")
+elif natural_number(num):
     print("Число простое")
 else:
     print(prime_factors_number(num))
