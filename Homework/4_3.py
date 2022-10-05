@@ -5,6 +5,9 @@ from random import choices
 
 
 def list_int(count):
+    if count < 1:
+        print('Error! Negative value of the number of numbers!')
+        return 0
     list_elements = choices(range(10), k=count)
     return list_elements
 
@@ -18,5 +21,6 @@ def list_unique(list_n):
 
 
 my_list = list_int(int(input('List length: ')))
-print(my_list)
-print(list_unique(my_list))
+if my_list:
+    print(my_list)
+    print(list_unique(my_list))
