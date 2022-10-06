@@ -5,14 +5,9 @@ from random import choices, choice
 
 def polynomial(degree):
     list_polynomial = choices(range(10), k=degree)
-    for i in range(degree):
-        if list_polynomial[i] > 0:
-            polynom = list_polynomial[i]
-            break
-    sign = choice('+-')
-    str_polynomial = f'{polynom}*x^{degree} {sign} '
+    str_polynomial = ''
 
-    for i in range(degree - 1, 1, -1):
+    for i in range(degree, 1, -1):
         polynom = choice(list_polynomial)
         if polynom > 0:
             sign = choice('+-')
@@ -22,16 +17,12 @@ def polynomial(degree):
     with open('poly.txt', 'a', encoding='utf-8') as my_file:
         my_file.write(f'{str_polynomial}\n')
 
+
 def polynomial_1(degree):
     list_polynomial = choices(range(10), k=degree)
-    for i in range(degree):
-        if list_polynomial[i] > 0:
-            polynom = list_polynomial[i]
-            break
-    sign = choice('+-')
-    str_polynomial = f'{polynom}*x^{degree} {sign} '
+    str_polynomial = ''
 
-    for i in range(degree - 1, 1, -1):
+    for i in range(degree, 1, -1):
         polynom = choice(list_polynomial)
         if polynom > 0:
             sign = choice('+-')
@@ -40,7 +31,6 @@ def polynomial_1(degree):
     str_polynomial += f'{polynom} = 0'
     with open('poly_2.txt', 'a', encoding='utf-8') as my_file_1:
         my_file_1.write(f'{str_polynomial}\n')
-
 
 
 for i in range(3):
