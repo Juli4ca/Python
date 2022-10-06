@@ -40,4 +40,16 @@ if -2 < num < 2:
 elif natural_number(num):
     print("Число простое")
 else:
-    print(prime_factors_number(num))
+   print(prime_factors_number(num))
+
+# N = int(input("Введите натуральное  число: "))
+# m = 2
+# listst = []
+# while m <= N:
+#     if N % m == 0:
+#         listst.append(m)
+#         N //= m
+#         m = 2
+#     else:
+#             m += 1
+# print(f"Список простых множителей: {listst}")
