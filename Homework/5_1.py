@@ -6,7 +6,7 @@
 # # авб абв бав абв вба бав вба абв абв абв
 # # авб бав вба бав вба
 
-from random import choices, sample
+from random import choices
 
 
 def new_str(count: int):
@@ -22,14 +22,14 @@ def new_str(count: int):
 
 
 def deletes_words(str_original: str):
-    words = str_original.split(' ')
-    new_words = []
-    for word in words:
-        if word != 'абв':
-            new_words.append(word)
-    del_str = ' '.join(new_words)
-
-    return del_str
+    # words = str_original.split(' ')
+    # new_words = []
+    # for word in words:
+    #     if word != 'абв':
+    #         new_words.append(word)
+    # del_str = ' '.join(new_words)
+    str_original.replace(' абв', '')
+    return str_original.replace('абв ', '')
 
 
 str1 = new_str(int(input('Enter a count: ')))
